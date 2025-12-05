@@ -1,0 +1,81 @@
+* {
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        body {
+            margin: 0;
+            height: 729px;
+            font-family: Arial, sans-serif;
+            background-image: url("https://m.media-amazon.com/images/G/01/digital/video/Magellan_MLP/MLP_ROW_Muti-title_Mag1._CB1564087979_.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #131A22;
+            display: flex;
+            align-items: center;
+            padding: 15px 40px;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #00a8e1;
+            margin-right: 40px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            color: #00a8e1;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 70px 80px;
+        }
+
+        .hero-text {
+            max-width: 45%;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            line-height: 1.6;
+            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background-color: #00a8e1;
+            color: white;
+            padding: 14px 32px;
+            font-size: 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #008bbd;
+        }
