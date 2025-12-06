@@ -26,9 +26,11 @@ function LoadMore() {
                 alt="Film Photo"
                 style="height:275px; width:200px;"
                 />
+                <div class="film-text">
                 <h3>${filmsDatas[index].name}</h3>
                 <h3><img src="image.png" style="width:20px; height:20px; vertical-align:middle;">${filmsDatas[index].rating.average}</h3>
-                <h4>${filmsDatas[index].genres[0]}</h4>
+                <h4>${filmsDatas[index].genres[0]},${filmsDatas[index].genres[1]},${filmsDatas[index].genres[2]}</h4>
+                </div>
                 </div>`;
     }
     else {

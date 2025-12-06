@@ -94,18 +94,18 @@ body {
 .film-card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   width: 200px;
-  height: 375px;
+  height: 365px;
   border: 5px gray solid;
-  padding: 2px 5px 2px 5px;
+  padding: 10px 5px 1px 5px;
   background-color: gray;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .film-card img {
   border-radius: 5px;
-  margin-bottom: 5px;
 }
 
 .film-card h2,
