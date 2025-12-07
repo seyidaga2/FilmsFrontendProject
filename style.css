@@ -22,6 +22,13 @@ body {
   align-items: center;
   padding: 15px 40px;
   box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.left-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
@@ -115,17 +122,127 @@ h4 {
 }
 
 .load-more {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }
 
 .load-more button {
-    border: 5px cyan solid;
-    background-color: cyan;
-    border-radius: 4px;
-    width: 100px;
-    height: 35px;
-    font-size: 16px;
+  border: 5px cyan solid;
+  background-color: cyan;
+  border-radius: 4px;
+  width: 100px;
+  height: 35px;
+  font-size: 16px;
 }
+
+.search-bar {
+    margin-left: 20px;
+    
+  position: relative;
+  width: 240px;
+}
+.search-bar input {
+  border: none;
+  background-color: #fff;
+  display: block;
+  width: 60%;
+  box-sizing: border-box;
+  padding: 3px 5px;
+}
+.search-bar img {
+  position: absolute;
+  top: 6px;
+  right: 100px;
+  width: 10px;
+  height: 10px;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    max-height: 90vh;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: none;
+    color: black;
+    border-radius: 16px;
+}
+
+.popup[style*="display: block"] {
+    display: flex !important;
+    flex-direction: row;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-popup:hover {
+    color: #ff4444;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.image img {
+    width: 280px;
+    height: 400px;
+    border-radius: 12px;
+}
+
+.film-data {
+    padding: 40px 40px 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.film-data h2 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.film-data h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #444;
+}
+
+.film-data h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+}
+
+.film-data a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.film-data a:hover {
+    color: #764ba2;
+}
+
