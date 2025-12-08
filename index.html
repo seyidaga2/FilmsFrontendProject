@@ -7,37 +7,41 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="navbar">
-      <div class="left-navbar">
-        <div class="logo">PrimeVideo</div>
-        <div class="nav-links">
-          <a href="./index.html">Home</a>
-          <a href="./films.html">Films</a>
+    <div class="container">
+      <div class="navbar">
+        <div class="left-navbar">
+          <div class="logo">PrimeVideo</div>
+          <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./films.html">Films</a>
+          </div>
+        </div>
+        <div class="search-bar" style="display: none">
+          <input type="text" placeholder="Search films" />
+          <img src="./assets/images/search.png" alt="" />
         </div>
       </div>
-      <div class="search-bar" style="display: none">
-        <input type="text" placeholder="Search films" />
-        <img src="search.png" alt="" />
+
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Watch Anytime, Anywhere</h1>
+          <p>
+            Enjoy exclusive Amazon Originals as well as popular movies and TV
+            shows. Join Prime Video now for €6.99 per month. Cancel anytime.
+          </p>
+
+          <a
+            href="https://www.amazon.co.uk/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Feu.primevideo.com%2Fauth%2Freturn%2Fref%3Dav_auth_ap%3F_t%3D1sg4xt6K4l9MvBhSSEAv_kjdSndo7Me_p6n4mP6-cqqxELAAAAAQAAAABpMz8wcmF3AAAAAPgWC9WfHH8iB-olH_E9xQ%26location%3Dhttps%3A%2F%2Fwww.primevideo.com%2Fsignup%3Fref_%253Ddvm_MLP_ROE_Join_1&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_prime_video_sso_gb&openid.mode=checkid_setup&countryCode=AZ&siteState=259-7594811-8391708&language=en_US&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            class="btn"
+            >Start your free trial</a
+          >
+        </div>
       </div>
+      <h2>Trending Now</h2>
+      <div class="trending-now"></div>
     </div>
 
-    <div class="hero">
-      <div class="hero-text">
-        <h1>Watch Anytime, Anywhere</h1>
-        <p>
-          Enjoy exclusive Amazon Originals as well as popular movies and TV
-          shows. Join Prime Video now for €6.99 per month. Cancel anytime.
-        </p>
-
-        <a
-          href="https://www.amazon.co.uk/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Feu.primevideo.com%2Fauth%2Freturn%2Fref%3Dav_auth_ap%3F_t%3D1sg4xt6K4l9MvBhSSEAv_kjdSndo7Me_p6n4mP6-cqqxELAAAAAQAAAABpMz8wcmF3AAAAAPgWC9WfHH8iB-olH_E9xQ%26location%3Dhttps%3A%2F%2Fwww.primevideo.com%2Fsignup%3Fref_%253Ddvm_MLP_ROE_Join_1&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_prime_video_sso_gb&openid.mode=checkid_setup&countryCode=AZ&siteState=259-7594811-8391708&language=en_US&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
-          class="btn"
-          >Start your free trial</a
-        >
-      </div>
-    </div>
-
-    
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

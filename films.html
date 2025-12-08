@@ -19,13 +19,35 @@
         <input type="text" placeholder="Search films" />
         <img src="search.png" alt="" />
       </div>
+      <div class="filters">
+        <select id="ratingSort">
+          <option value="none">Sort by Rating</option>
+          <option value="desc">Highest → Lowest</option>
+          <option value="asc">Lowest → Highest</option>
+        </select>
+
+        <select id="genreFilter">
+          <option value="all">All Genres</option>
+          <option value="Drama">Drama</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Science-Fiction">Sci-Fi</option>
+          <option value="Horror">Horror</option>
+          <option value="Action">Action</option>
+        </select>
+
+        <select id="statusFilter">
+          <option value="all">All Status</option>
+          <option value="Running">Running</option>
+          <option value="Ended">Ended</option>
+        </select>
+      </div>
     </div>
     <div class="films"></div>
 
     <div class="load-more">
       <button class="load-more-button">Load More</button>
     </div>
-    <script src="script.js"></script>
-    
+    <script src="films.js"></script>
   </body>
 </html>
