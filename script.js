@@ -10,15 +10,12 @@ const comedyShows = document.querySelector(".comedy-shows");
 const loadingSpinner = document.querySelector(".loading-spinner");
 const bodytag = document.querySelector("body");
 
-// Show loading spinner
 if (loadingSpinner) loadingSpinner.style.display = "block";
 
 axios
-  .get("https://api.tvmaze.com/shows")
   .then((response) => {
     filmDatas = response.data;
 
-    // Trending Now - Top 8 highest rated
     const top8 = filmDatas
       .filter((film) => film.rating.average !== null)
       .sort((a, b) => b.rating.average - a.rating.average)
@@ -26,7 +23,6 @@ axios
 
     renderFilmSection(trending, top8);
 
-    // Top Rated - 8 shows with highest ratings (different from trending)
     const topRatedShows = filmDatas
       .filter((film) => film.rating.average !== null && film.rating.average >= 8)
       .sort((a, b) => b.rating.average - a.rating.average)
@@ -34,7 +30,6 @@ axios
 
     renderFilmSection(topRated, topRatedShows);
 
-    // Recently Added - Based on premiered date
     const recentShows = filmDatas
       .filter((film) => film.premiered)
       .sort((a, b) => new Date(b.premiered) - new Date(a.premiered))
@@ -42,7 +37,6 @@ axios
 
     renderFilmSection(recentlyAdded, recentShows);
 
-    // Drama Shows
     const dramaFilms = filmDatas
       .filter((film) => film.genres.includes('Drama') && film.rating.average !== null)
       .sort((a, b) => b.rating.average - a.rating.average)
@@ -50,7 +44,6 @@ axios
 
     renderFilmSection(dramaShows, dramaFilms);
 
-    // Action Shows
     const actionFilms = filmDatas
       .filter((film) => (film.genres.includes('Action') || film.genres.includes('Adventure')) && film.rating.average !== null)
       .sort((a, b) => b.rating.average - a.rating.average)
@@ -58,7 +51,6 @@ axios
 
     renderFilmSection(actionShows, actionFilms);
 
-    // Comedy Shows
     const comedyFilms = filmDatas
       .filter((film) => film.genres.includes('Comedy') && film.rating.average !== null)
       .sort((a, b) => b.rating.average - a.rating.average)
@@ -66,10 +58,8 @@ axios
 
     renderFilmSection(comedyShows, comedyFilms);
 
-    // Hide loading spinner
     if (loadingSpinner) loadingSpinner.style.display = "none";
 
-    // Add event listeners to favorite buttons and cards
     attachFavoriteListeners();
     attachCardClickListeners();
   })
@@ -113,7 +103,6 @@ function renderFilmSection(container, films) {
 function attachCardClickListeners() {
   document.querySelectorAll(".film-card").forEach(card => {
     card.addEventListener("click", function (e) {
-      // Check if favorite button was clicked
       if (e.target.closest(".favorite-btn")) {
         return;
       }
@@ -147,7 +136,6 @@ function toggleFavorite(filmId, button) {
   
   localStorage.setItem('favorites', JSON.stringify(favorites));
   
-  // Add animation
   button.style.transform = 'scale(1.3)';
   setTimeout(() => {
     button.style.transform = 'scale(1)';
@@ -196,7 +184,6 @@ function OpenPopUp(id) {
 
   bodytag.appendChild(popupDiv);
 
-  // Add event listeners
   const closePopUpButton = popupDiv.querySelector(".close-popup");
   closePopUpButton.addEventListener("click", ClosePopUp);
   backdrop.addEventListener("click", ClosePopUp);
@@ -209,7 +196,6 @@ function OpenPopUp(id) {
     });
   }
 
-  // Animate popup entrance
   setTimeout(() => {
     popupDiv.style.opacity = '1';
     popupDiv.style.transform = 'translate(-50%, -50%) scale(1)';

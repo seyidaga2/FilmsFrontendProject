@@ -10,7 +10,6 @@ searchInput.addEventListener("input", Search);
 let filmsDatas = [];
 let filteredFilms = [];
 
-// Show loading spinner
 if (loadingSpinner) loadingSpinner.style.display = "block";
 
 fetch("https://api.tvmaze.com/shows")
@@ -111,7 +110,6 @@ function LoadMore() {
 const bodytag = document.querySelector("body");
 
 filmsContainer.addEventListener("click", function (e) {
-  // Check if favorite button was clicked
   if (e.target.closest(".favorite-btn")) {
     return;
   }
@@ -146,7 +144,6 @@ function toggleFavorite(filmId, button) {
   
   localStorage.setItem('favorites', JSON.stringify(favorites));
   
-  // Add animation
   button.style.transform = 'scale(1.3)';
   setTimeout(() => {
     button.style.transform = 'scale(1)';
@@ -195,7 +192,6 @@ function OpenPopUp(id) {
 
   bodytag.appendChild(popupDiv);
 
-  // Add event listeners
   const closePopUpButton = popupDiv.querySelector(".close-popup");
   closePopUpButton.addEventListener("click", ClosePopUp);
   backdrop.addEventListener("click", ClosePopUp);
@@ -206,7 +202,6 @@ function OpenPopUp(id) {
       e.stopPropagation();
       toggleFavorite(film.id, this);
       
-      // Update all favorite buttons with this film ID
       document.querySelectorAll(`.favorite-btn[data-id="${film.id}"]`).forEach(btn => {
         if (favorites.includes(film.id)) {
           btn.classList.add('active');
@@ -217,7 +212,6 @@ function OpenPopUp(id) {
     });
   }
 
-  // Animate popup entrance
   setTimeout(() => {
     popupDiv.style.opacity = '1';
     popupDiv.style.transform = 'translate(-50%, -50%) scale(1)';
@@ -275,7 +269,6 @@ function ApplyFilters() {
   LoadMore();
 }
 
-// Scroll to top button
 const scrollTopBtn = document.createElement('button');
 scrollTopBtn.className = 'scroll-top-btn';
 scrollTopBtn.innerHTML = '↑';
