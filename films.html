@@ -3,11 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prime Video</title>
+    <meta name="description" content="Browse and discover all movies and TV shows available on Prime Video. Filter by genre, rating, and status." />
+    <title>All Films - Prime Video</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="navbar">
+    <!-- Loading Spinner -->
+    <div class="loading-spinner"></div>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
       <div class="left-navbar">
         <div class="logo">PrimeVideo</div>
         <div class="nav-links">
@@ -42,12 +47,18 @@
           <option value="Ended">Ended</option>
         </select>
       </div>
-    </div>
-    <div class="films"></div>
+    </nav>
+    
+    <!-- Films Grid Container -->
+    <main>
+      <div class="films"></div>
 
-    <div class="load-more">
-      <button class="load-more-button">Load More</button>
-    </div>
+      <div class="load-more">
+        <button class="load-more-button">Load More</button>
+      </div>
+    </main>
+    
+    <!-- Scripts -->
     <script src="films.js"></script>
   </body>
 </html>

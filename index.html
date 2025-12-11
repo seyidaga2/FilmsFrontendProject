@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prime Video</title>
+    <meta name="description" content="Watch exclusive Amazon Originals, popular movies, and TV shows on Prime Video. Stream anytime, anywhere." />
+    <title>Prime Video - Watch Movies & TV Shows Online</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner"></div>
+    
     <div class="container">
-      <div class="navbar">
+      <!-- Navigation Bar -->
+      <nav class="navbar">
         <div class="left-navbar">
           <div class="logo">PrimeVideo</div>
           <div class="nav-links">
@@ -17,30 +22,67 @@
           </div>
         </div>
         <div class="search-bar" style="display: none">
-          <input type="text" placeholder="Search films" />
-          <img src="./assets/images/search.png" alt="" />
+          <input type="text" placeholder="Search films..." />
+          <img src="./assets/images/search.png" alt="Search icon" />
         </div>
-      </div>
+      </nav>
 
-      <div class="hero">
+      <!-- Hero Section -->
+      <section class="hero">
         <div class="hero-text">
           <h1>Watch Anytime, Anywhere</h1>
           <p>
             Enjoy exclusive Amazon Originals as well as popular movies and TV
             shows. Join Prime Video now for €6.99 per month. Cancel anytime.
           </p>
-
           <a
             href="https://www.amazon.co.uk/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Feu.primevideo.com%2Fauth%2Freturn%2Fref%3Dav_auth_ap%3F_t%3D1sg4xt6K4l9MvBhSSEAv_kjdSndo7Me_p6n4mP6-cqqxELAAAAAQAAAABpMz8wcmF3AAAAAPgWC9WfHH8iB-olH_E9xQ%26location%3Dhttps%3A%2F%2Fwww.primevideo.com%2Fsignup%3Fref_%253Ddvm_MLP_ROE_Join_1&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_prime_video_sso_gb&openid.mode=checkid_setup&countryCode=AZ&siteState=259-7594811-8391708&language=en_US&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
             class="btn"
+            target="_blank"
+            rel="noopener noreferrer"
             >Start your free trial</a
           >
         </div>
-      </div>
-      <h2>Trending Now</h2>
-      <div class="trending-now"></div>
+      </section>
+
+      <!-- Trending Section -->
+      <section class="trending-section">
+        <h2>Trending Now</h2>
+        <div class="trending-now"></div>
+      </section>
+
+      <!-- Top Rated Section -->
+      <section class="trending-section">
+        <h2>Top Rated Shows</h2>
+        <div class="top-rated"></div>
+      </section>
+
+      <!-- Recently Added Section -->
+      <section class="trending-section">
+        <h2>Recently Added</h2>
+        <div class="recently-added"></div>
+      </section>
+
+      <!-- Drama Section -->
+      <section class="trending-section">
+        <h2>Popular Drama</h2>
+        <div class="drama-shows"></div>
+      </section>
+
+      <!-- Action Section -->
+      <section class="trending-section">
+        <h2>Action & Adventure</h2>
+        <div class="action-shows"></div>
+      </section>
+
+      <!-- Comedy Section -->
+      <section class="trending-section">
+        <h2>Comedy Shows</h2>
+        <div class="comedy-shows"></div>
+      </section>
     </div>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
   </body>
